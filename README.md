@@ -36,4 +36,4 @@ Create a core app that centralize all migrations and thing which can be used int
 
 When you change de model, you must run this command again.
 
-`$ docker-compose run app sh -c "python manage.py makemigrations core"`
+`$ docker-compose run app sh -c "python manage.py makemigrations <appname>"`
