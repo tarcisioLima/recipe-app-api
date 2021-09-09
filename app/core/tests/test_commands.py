@@ -14,9 +14,8 @@ class CommandTests(TestCase):
             call_command('wait_for_db')
             self.assertEqual(gi.call_count, 1)
 
-    """ This decorator replaces time.sleep 
+    """This decorator '@patch' replaces time.sleep
     with boolean for not slow the test exec"""
-
     @patch('time.sleep', return_value=True)
     def test_wait_for_db(self, ts):
         """Test waiting for db"""
